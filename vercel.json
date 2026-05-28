@@ -1,11 +1,4 @@
- {
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "https://github.com/athallahrafi"
-    }
-  ],
-  {
+{
   "version": 2,
   "builds": [
     {
@@ -16,9 +9,13 @@
   ],
   "routes": [
     {
+      "src": "/",
+      "status": 301,
+      "headers": { "Location": "https://github.com/athallahrafi" }
+    },
+    {
       "src": "/(.*)",
       "dest": "api/orchestrator.py"
     }
   ]
-}
 }
